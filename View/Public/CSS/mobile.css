@@ -1,0 +1,111 @@
+@media only screen and (max-width: 600px) {
+    
+    .page-grid {
+        width: 100%;
+        height: auto;
+        max-width: 1300px;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr auto 7rem;
+    }
+    
+        .headOpener { 
+            grid-row: 1;
+            grid-column: 1;
+        }
+    
+        .product-grid{ 
+            grid-row: 2;
+            grid-column: 1;
+        }
+    
+        .footer{ 
+            grid-row: 3;
+            grid-column: 1;
+        }
+    
+    .customNavbar {
+        display: absolute;
+        position: fixed;
+        left: 0;
+        bottom: 0;
+        z-index: 9999;
+        width: 100%;
+        border-radius: .25rem .25rem 0 0;
+    }
+
+    .product-grid {
+        grid-template-columns: 1fr;
+        grid-template-rows: 10rem;
+    }
+
+    .product-card {
+        height: 10rem;
+        grid-template-columns: 40% auto;
+        grid-template-rows: 1fr;
+    }
+
+    .product-image {
+        max-height: 6.5rem;
+    }
+    .desktop-menu {
+        display: none;
+    }
+   
+}
+@media only screen and (min-width: 600px) {
+    
+    .dropdown {
+        position: initial;
+        z-index: initial;
+    }
+
+    .modalButtonSide {
+        display: none;
+    }
+
+    .nav-container-grid {
+        grid-template-columns: 20% auto 20% 20%;
+    }
+
+    .desktop-menu {
+        grid-row: 1;
+        grid-column: 4;
+    }
+
+    .myModal {
+        display: block;
+        height: 100%;
+        width: 0;
+        position: fixed;
+        z-index: 1;
+        top: 0;
+        right: 0;
+        background-color: #111;
+        overflow-x: hidden;
+        transition: 0.5s;
+    }
+
+    .modalContent {
+        background-color: #FFF;
+        margin: auto;
+        width: 100%;
+        height: 100%;
+        max-width: 1000px;
+        animation-name: modalOpen;
+        animation-duration: .8s;
+        z-index: 99;
+    }
+
+    
+button[name="combined"] {
+    position: unset !important;
+    z-index: initial !important;
+  }
+  
+  .input-group-append .btn,
+  .input-group-prepend .btn {
+    position: unset !important;
+    z-index: 0 !important;
+  }
+}
